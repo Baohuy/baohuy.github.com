@@ -38,7 +38,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 
 	function initialize() {
-	    var myLatlng = new google.maps.LatLng(16.067991, 108.198755);
+	    var myLatlng = new google.maps.LatLng(10.794568, 106.628194);
 	    var myLatlng_cemter = myLatlng;
 
 	    // BEGIN STYLE
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 
 	    var mapOptions = {
-	        zoom: 16,
+	        zoom: 17,
 	        center: myLatlng_cemter,
 	        mapTypeId: google.maps.MapTypeId.ROADMAP,
 	        disableDefaultUI: false,
@@ -69,7 +69,7 @@ $(document).ready(function() {
 	    var marker = new google.maps.Marker({
 	        position: myLatlng,
 	        map: map,
-	        title: 'Hello'
+	        title: 'Bảo Huy: 17/42 Gò Dầu, Tân Phú, TP. Hồ Chí Minh'
 	    });
 
 	    // BEGIN STYLE

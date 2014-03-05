@@ -1,0 +1,255 @@
+@import "lesshat.less";
+
+@base-color: #573d7d;
+@light-color: #ddd;
+@dark-color: #333;
+
+@font-face {
+	.font-face('Open Sans', ~'../fonts/opensans/regular/font', normal, normal);
+}
+
+@font-face {
+	.font-face('Open Sans', ~'../fonts/opensans/bold/font', bold, normal);
+}
+
+@font-face {
+	.font-face('Open Sans', ~'../fonts/opensans/italic/font', normal, italic);
+}
+
+@font-face {
+	.font-face('Open Sans', ~'../fonts/opensans/bolditalic/font', bold, italic);
+}
+
+* {
+	outline: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background: #fff;
+	height: 100%;
+	color: @dark-color;
+}
+
+.btn-outline-inverse {
+	color: #fff;
+	background-color: transparent;
+	border-color: #cdbfe3;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+
+	&:hover, &:focus, &:active {
+		color: @base-color;
+		text-shadow: none;
+		background-color: #fff;
+		border-color: #fff;
+	}
+}
+
+.navbar {
+	background: @base-color;
+	border-bottom: 1px solid @base-color - 10;
+
+	.navbar-toggle {
+
+		.icon-bar {
+			background: @light-color;
+		}
+	}
+	
+	a {
+		color: @light-color + 100;
+	}
+
+	li {
+
+		a {
+			color: @light-color;
+
+			&:hover {
+				background: @base-color + 10;
+			}
+		}
+	}
+}
+
+#home-section {
+	background: url(../img/home-section.png);
+	min-height: 100%;
+
+	.bs-masthead {
+		position: relative;
+		padding: 30px 15px;
+		padding-top: 80px;
+		text-align: center;
+		text-shadow: 0 1px 0 rgba(0,0,0,.15);
+
+		h1 {
+			font-size: 50px;
+			line-height: 1;
+			color: #fff;
+			font-family: sans;
+		}
+
+		.lead {
+			color: @light-color;
+		}
+
+		.btn-outline-inverse {
+			margin: 10px;
+		}
+	}
+}
+
+#about-section {
+	background: #333;
+	color: @light-color;
+	text-align: center;
+	padding-bottom: 30px;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+
+	h1 {
+		font-family: sans;
+		color: #fff;
+		font-size: 32px;
+	}
+
+	p {
+		max-width: 800px;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+#service-section {
+	padding-bottom: 30px;
+	padding-top: 10px;
+
+	h1 {
+		text-align: center;
+		font-family: sans;
+		color: #000;
+		font-size: 32px;
+		font-weight: bold;
+	}
+
+	h2 {
+		font-size: 18px;
+		font-weight: bold;
+		color: #222;
+	}
+
+	img {
+		width: 100%;
+		border: 1px solid #eee
+	}
+
+	p {
+		margin-top: 10px;
+	}
+}
+
+#contact-section {
+	background: url(../img/home-section.png);
+	color: @light-color;
+	text-align: center;
+
+	h1 {
+		font-family: sans;
+		color: #fff;
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+
+	address {
+
+		a {
+			text-decoration: none;
+			color: @light-color;
+			margin-right: 10px;
+			display: inline-block;
+
+			span {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	#google-map {
+		height: 400px;
+	}
+}
+
+#footer-section {
+	background: #000;
+	color: #999;
+	padding: 25px 0;
+	
+	a {
+		color: #fdfdfd;
+	}
+
+}
+
+@media (min-width: 768px) {
+
+	#home-section {
+
+		.bs-masthead {
+			text-align: left;
+			padding-top: 140px;
+			padding-bottom: 140px;
+
+			h1 {
+				font-size: 100px;
+			}
+
+			.lead {
+				margin-right: 25%;
+				font-size: 30px;
+
+				span {
+					display: inline-block;
+				}
+			}
+			
+			.btn-outline-inverse {
+				width: auto;
+				margin: 20px 5px 20px 0;
+				padding: 18px 24px;
+				font-size: 21px;
+			}
+		}
+	}
+
+	#about-section,
+	#service-section,
+	#contact-section {
+
+		h1 {
+			font-size: 40px;
+		}
+
+		h2 {
+			font-size: 22px;
+		}
+	}
+
+	#contact-section {
+
+		h2 {
+			font-size: 18px;
+		}
+	}
+}
